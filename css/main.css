@@ -1,0 +1,250 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+background:white;
+font: bold 14px'Lobster', cursive;
+}
+header, nav{
+display: block;
+}
+/* El logo sera flotado a la izquierda */
+#logo{
+background: url(logo.png) no-repeat 0 0;
+display: block;
+float: left;
+margin: 6px 10px 0;
+width: 82px;
+height: 46px;
+text-indent: -9999px
+}
+/* Nuestro nav con id #menu lo flotaremos a la derecha*/
+#menu{float: right;}
+/* Quitamos estilos por defecto de el tag UL */
+#menu ul{
+list-style: none;
+font-size: 14px;
+font-family:Open Sans;
+}
+
+/* Centramos y ponemos los textos en mayuscula */
+#menu li{
+display: block;
+float: left;
+text-transform: uppercase;
+text-align: center;
+}
+
+/* Damos estilo a nuestros enlaces */
+#menu li a{
+display: block;
+color: #fff;
+text-decoration: none;
+height: 60px;
+line-height: 60px;
+padding: 0 26px;
+}
+#menu li a:hover{
+background:#23F9B5;
+color:white;
+}
+
+/* Estilos #nav-mobile y lo ocultamos */
+#nav-mobile{
+display: none;
+background: url(../images/nav.png) no-repeat center center;
+float: right;
+width: 60px;
+height: 60px;
+position: absolute;
+right: 0;
+top:0;
+opacity: .6;
+}
+/* Agregaremos esta clase a #nav-mobile, cuando el menu mobile haya sido desplegado */
+#nav-mobile.nav-active{
+opacity: 1;
+}
+/* Content */
+#content{
+width: 80%;
+margin: 60px 10%;
+text-align: center;
+overflow: hidden;
+}
+h2{
+font-size: 50px;
+font-weight: 600;
+text-transform: uppercase;
+color: #624c3f;
+}
+header{
+background-image:url(../images/hero.jpg);
+height:790px;
+width:100%;
+min-height:400px;
+background-size:cover;
+position:relative;
+width: 100%;
+z-index: 2;
+}
+.name{
+padding-top: 0px;
+padding: 54px;
+color:#23F9B5;
+font-size:144px;
+line-height: 604px;
+text-align: center;
+font-family:Lobster;
+}
+.relative{
+position:relative;
+}
+.about{
+padding:86px;
+}
+.acerca{
+font-family: lobster;
+font-size: 45px;
+text-align: center;
+padding-bottom: 18px;
+color: black;
+}
+.acerca:hover{
+background-color:#23F9B5;
+color:white;
+}
+.intro{
+font-family:open sans;
+font-size:18px;
+font-weight: lighter;
+}
+.gif{
+width: 288px;
+height: 284px;
+border-radius: 167px
+}
+.skills{
+padding:24px;
+font-family:open sans;
+}
+.sk{
+text-align: center;
+font-family: lobster;
+font-size:45px;
+padding-bottom: 55px;
+}
+.sk:hover{
+background-color:#23F9B5;
+color:white;
+}
+.check{
+text-align: center;
+font-family: lobster;
+font-size: 45px;
+padding-bottom: 37px;
+padding-top: 27px;
+}
+.check:hover{
+background-color:#23F9B5;
+color:white;
+}
+.work{
+padding-bottom:72px;
+}
+.gitname{
+font-size: 40px;
+padding-top: 19px;
+font-family: lobster;
+text-align: center;
+}
+.git{
+text-align:center;
+}
+footer{
+background-color:#23F9B5;
+height:138px;
+width: 100%;
+}
+.nam{
+font-size: 20px;
+padding-top:29px;
+font-family: lobster;
+text-align: center;
+}
+.mail{
+text-align: center;
+padding-top:10px;
+font-size: 12px;
+font-family: sans-serif;
+}
+.phone{
+text-align: center;
+font-family: sans-serif;
+font-size: 11px;
+}
+/*
+MEDIA QUERY
+*/
+@media only screen and (max-width: 768px) {
+
+h2{font-size: 40px;}
+
+/* mostramos #nav-mobile */
+#nav-mobile{ display: block; }
+/* Fijamos nuestro nav en 100% ancho y dejamos de flotarlo  */
+#menu{
+width: 100%;
+float: none;
+padding-top: 60px;
+}
+/* Convertimos nuestra lista de enlaces en un menú horizontal */
+#menu ul{
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+-moz-box-shadow: 0 1px 2px rgba(0,0,0,.5);
+box-shadow: 0 1px 2px rgba(0,0,0,.5);
+max-height: 0;
+overflow: hidden;
+}
+/* estilos para los LI del menu */
+#menu li{
+background: #33363b;
+border-bottom: 1px solid #282b30;
+float: none;
+}
+/* Quitamos el borde del ultimo item del menú */
+#menu li:last-child{ border-bottom: 0;}
+#menu li a{
+padding: 15px 0;
+height: auto;
+line-height: normal;
+}
+#menu li a:hover{background:#2a2d33}
+/* Agregamos una animación al despligue del menú */
+#menu ul.open-menu{
+max-height: 400px;
+-webkit-transition: max-height .4s;
+-moz-transition: max-height .4s;
+-ms-transition: max-height .4s;
+-o-transition: max-height .4s;
+transition: max-height .4s;
+}
+}
+@media only screen and (max-width:640px){
+.about{
+padding-bottom: 2px;
+}
+.name{
+font-size:76px;
+font-weight:bold;
+padding:4px;
+}
+.gif{
+margin-left: 72px;
+margin-bottom: 23px;
+}
+.intro{
+text-align: center;
+}
+}
